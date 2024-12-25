@@ -71,7 +71,7 @@ Before you begin, ensure that you have the following software installed on your 
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/user-auth-api.git
+   git clone https://github.com/Manish0045/user-auth-services-api.git
    cd user-auth-api
    ```
 
