@@ -72,7 +72,7 @@ Before you begin, ensure that you have the following software installed on your 
 
    ```bash
    git clone https://github.com/Manish0045/user-auth-services-api.git
-   cd user-auth-api
+   cd user-auth-services-api
    ```
 
 2. Install the required dependencies:
