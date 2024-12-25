@@ -2,6 +2,10 @@
 
 User authentication project implementation using Node.js, MongoDB and Express.js task by Innobyte Solution
 
+## USER GUIDE LINK OR HANDBOOK TO RUN API ON LOCAL MACHINE:
+
+- [link for user guide of api](https://drive.google.com/file/d/13mh_pW4f_8d9_6lJSIylaJdH8nUlK7_u/view?usp=drive_link)
+
 This project implements a user authentication system using **Node.js**, **MongoDB**, and **Express.js**. It provides a basic authentication flow for user registration, login, profile management, and email verification.
 
 ### Table of Contents
