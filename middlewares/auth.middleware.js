@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { CustomError } = require('../utils/ErrorHandler');
+const  CustomError  = require('../utils/ErrorHandler');
 const { STATUS_CODES, throwError } = require('../utils/constants');
 const { User } = require('../models/user.model');
 

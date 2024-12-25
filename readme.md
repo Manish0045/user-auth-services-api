@@ -113,6 +113,8 @@ After installation and configuration, you can start the project by running the f
    npm start
 ```
 
+---
+
 ## API Endpoints
 
 ### Sign Up
@@ -145,15 +147,15 @@ After installation and configuration, you can start the project by running the f
    }
   ```
 
--`Sample Error Reponse`
+- `Sample Error Reponse`
 
-```
-{
-   "statusCode": 409,
-   "message": "User already exists with the same username or email.",
-   "status": "Error"
-}
-```
+  ```
+  {
+     "statusCode": 409,
+     "message": "Username or Email already exists!",
+     "success": false
+  }
+  ```
 
 ### Sign In
 
@@ -183,15 +185,25 @@ After installation and configuration, you can start the project by running the f
    }
   ```
 
--`Sample Error Reponse`:
+- `Sample Error Reponse`:
 
-```
-   {
-      "status": "Error",
-      "statusCode": 401,
-      "message": "Invalid credentials."
-   }
-```
+  ```
+     {
+      "statusCode": 404,
+      "message": "Invalid username or email",
+      "success": false
+     }
+  ```
+
+- `Unverified account error`:
+
+  ```
+     {
+      "statusCode": 403,
+      "message": "Please verify your email to login!",
+      "success": false
+     }
+  ```
 
 ### Profile
 
@@ -228,15 +240,23 @@ After installation and configuration, you can start the project by running the f
 
   ```
 
--`Sample Error Reponse`:
+- `Sample Error Reponse`:
 
-```
+  ```
+     {
+         "statusCode": 400,
+         "message": "Token is missing or malformed",
+         "success": false
+      }
+  ```
+
+  ```
    {
-      "status": "Error",
       "statusCode": 401,
-      "message": "Unauthorized : Invalid Access Token!"
+      "message": "Invalid token",
+      "success": false
    }
-```
+  ```
 
 - `Email Confirmation`:
 
@@ -254,6 +274,8 @@ After installation and configuration, you can start the project by running the f
         If you did not create an account, no action is required.
         If you have any questions, feel free to contact our support team at {support team email or contact}.
   ```
+
+---
 
 ## Error Handling
 
@@ -290,6 +312,8 @@ After installation and configuration, you can start the project by running the f
    "message": "Unauthorized : Invalid Access Token!"
 }
 ```
+
+---
 
 ## Testing
 

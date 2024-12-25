@@ -37,8 +37,10 @@ const loginUser = async (req, res, next) => {
         if (!username && !email) throwError(STATUS_CODES.BAD_REQUEST, "Username or email is required to sign in!");
         if (!password) throwError(STATUS_CODES.BAD_REQUEST, "Please provide password!");
 
-        const user = await User.findOne({ $or: [{ username }, { email }] });
+        const user = await User.findOne({ $or: [{ username }, { email }] }).select("+password");
         if (!user) throwError(STATUS_CODES.NOT_FOUND, "Invalid username or email");
+
+        if (!user.isVerified) throwError(STATUS_CODES.FORBIDDEN, "Please verify your email to login!");
 
         const isMatch = await comparePassword(password, user.password);
         if (!isMatch) throwError(STATUS_CODES.BAD_REQUEST, "Invalid credentials");
